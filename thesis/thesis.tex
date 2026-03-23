@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% njuthesis 示例模板 v1.4.3 2025-05-21
+% https://github.com/nju-lug/NJUThesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+    type = master,
+    degree = professional,
+    % oneside,
+    fontset = fandol
+  ]{njuthesis}
+
+% 模板选项设置，包括个人信息、外观样式等
+\input{njuthesis-setup.def}
+
+% 自行载入所需宏包
+\usepackage{booktabs}  % 三线表
+\usepackage{longtable} % 长表格
+\usepackage{multirow}  % 合并行
+\usepackage{tabularx}  % 自适应列宽表格
+\usepackage{graphicx}  % 插图
+
+% 开始编写论文
+\begin{document}
+
+%---------------------------------------------------------------------
+%	封面、摘要、前言和目录
+%---------------------------------------------------------------------
+
+% 生成封面页
+\maketitle
+
+\raggedbottom
+
+\begin{abstract}
+  中文摘要
+\end{abstract}
+
+\begin{abstract*}
+  English abstract
+\end{abstract*}
+
+% 生成目录
+\tableofcontents
+
+%---------------------------------------------------------------------
+%	正文部分
+%---------------------------------------------------------------------
+\mainmatter
+
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+\include{chapters/chapter6}
+
+%---------------------------------------------------------------------
+%	参考文献
+%---------------------------------------------------------------------
+
+\printbibliography
+
+%---------------------------------------------------------------------
+%	致谢
+%---------------------------------------------------------------------
+
+\begin{acknowledgement}
+  致谢内容
+\end{acknowledgement}
+
+%---------------------------------------------------------------------
+%	附录部分
+%---------------------------------------------------------------------
+
+\appendix
+
+\include{chapters/appendix}
+
+% 完工
+\end{document}
